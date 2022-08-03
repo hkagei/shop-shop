@@ -10,11 +10,11 @@ const { Provider } = StoreContext;
 const StoreProvider = ({ value = [], ...props }) => {
 // With the StoreProvider function, we instantiate our initial global state with the useProductReducer() function we created earlier. Because that wraps it around the useReducer() Hook from React, every time we run this useProductReducer() function, we receive the following two items in return
     const [state, dispatch] = useProductReducer({
-        // state is the most up-to-date version of our global state object.
-        // dispatch is the method we execute to update our state. It is specifically going to look for an action object passed in as its argument, as we'll soon see.
       products: [],
       categories: [],
       currentCategory: '',
+      // state is the most up-to-date version of our global state object.
+      // dispatch is the method we execute to update our state. It is specifically going to look for an action object passed in as its argument, as we'll soon see.
     });
     // use this to confirm it works!
     console.log(state);

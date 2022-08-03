@@ -42,8 +42,8 @@ function App() {
       <Router>
         <div>
           <StoreProvider>
-            <Nav />
-            <Routes>
+          <Nav />
+           <Switch>
               <Route 
                 path="/" 
                 element={<Home />} 
@@ -68,11 +68,12 @@ function App() {
                 path="*" 
                 element={<NoMatch />}
               />
-            </Routes>
+            </Switch>
           </StoreProvider>
         </div>
       </Router>
     </ApolloProvider>
   );
 }
+
 export default App;
